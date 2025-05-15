@@ -7,15 +7,15 @@ export default function App() {
     'red', 'green', 'blue', 'yellow', 'purple'
   ]);
 
-
   const randomizeColors = () => {
+    
     const shuffledColors = [...colors].sort(() => Math.random() - 0.5);
-    setColors(shuffledColors);
+    setColors(shuffledColors); 
   };
 
   return (
     <View style={styles.container}>
-      <Button title="Clique aqui" onPress={randomizeColors} />
+      <Button title="Clique aqui" onPress={randomizeColors} /> 
       <View style={styles.squareContainer}>
         {colors.map((color, index) => (
           <View key={index} style={[styles.square, { backgroundColor: color }]} />
